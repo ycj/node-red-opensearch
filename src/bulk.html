@@ -1,0 +1,27 @@
+<script type="text/html" data-template-name="bulk">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> <span data-i18n="fields.name"></span></label>
+        <input type="text" id="node-input-name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-server"><i class="fa fa-tag"></i> <span data-i18n="fields.server"></span></label>
+        <input type="text" id="node-input-server">
+    </div>
+</script>
+
+<script type="text/javascript">
+    RED.nodes.registerType('bulk', {
+        category: 'opensearch',
+        color: '#D8BFD8',
+        defaults: {
+            name: {value:""},
+            server: {value: "", type: "remote-server", required: true},
+        },
+        inputs: 1,
+        outputs: 1,
+        // icon: "file.png",
+        label: function() {
+            return this.name||"opensearch-bulk";
+        },
+    });
+</script>
