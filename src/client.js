@@ -11,7 +11,7 @@ module.exports = function(RED) {
         this.server = RED.nodes.getNode(config.server);
         
         let options = {
-            node: `${config.server.protocol}://${config.server.username}:${config.server.password}@${config.server.host}:${config.server.port}`,
+            node: `${this.server.protocol}://${this.server.username}:${this.server.password}@${this.server.host}:${this.server.port}`,
         }
         if (config.protocol === 'https') {
             options.ssl = {
