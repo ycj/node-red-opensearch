@@ -1,0 +1,8 @@
+{   
+    "fields": {
+        "name": "name",
+        "nameHint": "please input name",
+        "command": "command",
+        "commandHint": "pleaes input command"
+    }
+}
