@@ -14,14 +14,14 @@
         category: 'opensearch',
         color: '#D8BFD8',
         defaults: {
-            name: {value:""},
-            server: {value: "", type: "remote-server", required: true},
+            name:   {value: ""},
+            server: {value: "", type: "remote-server"},
         },
-        inputs: 1,
+        inputs:  1,
         outputs: 1,
-        // icon: "file.png",
+        icon: "db.png",
         label: function() {
-            return this.name||"opensearch-client";
+            return this.name||"client";
         },
     });
 </script>
