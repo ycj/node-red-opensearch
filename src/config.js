@@ -3,14 +3,14 @@
 module.exports = function(RED) {
 
     // 配置节点
-    function ConfigNode(n) {
-        RED.nodes.createNode(this, n);
-        this.host = n.host;
-        this.port = n.port;
-        this.protocol = n.protocol;
-        this.username = n.username;
-        this.password = n.password;
-        this.ca = n.ca;
+    function ConfigNode(config) {
+        RED.nodes.createNode(this, config);
+        this.protocol = config.protocol;
+        this.host = config.host;
+        this.port = config.port;
+        this.username = config.username;
+        this.password = config.password;
+        this.ca = config.ca;
     }
 
     RED.nodes.registerType('remote-server', ConfigNode)
