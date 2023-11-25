@@ -1,8 +1,6 @@
 // Desc: OpenSearch Node-RED config node
 
-const OpenSearch = require('@opensearch-project/opensearch')
-
-module.exports = function Nodes(RED) {
+module.exports = function(RED) {
 
     // 配置节点
     function ConfigNode(n) {
